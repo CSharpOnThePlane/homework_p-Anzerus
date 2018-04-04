@@ -10,19 +10,21 @@ namespace ConsoleApp48
     {
         static void Main(string[] args)
         {
-            int kolisestvo = 0;
-            for (int i = 0; i < 20; i++)
+            int svetyear = 0;
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("введите рост");
-                int rost = int.Parse(Console.ReadLine());
-                if (rost>160)
+             
+                Console.WriteLine("введите расстояние до города");
+                int km = int.Parse(Console.ReadLine());
+                
+                if (svetyear < km)
                 {
-                    kolisestvo = kolisestvo + 1;
-                    
+                    svetyear = km;
                 }
-               
+
+                Console.WriteLine("расстояние до мамого удаленного города =" + svetyear);
             }
-            Console.WriteLine(kolisestvo);
+          
         }
     }
 }

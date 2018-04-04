@@ -19,14 +19,18 @@ namespace LoopyLandscape {
 			graphics = e.Graphics;
 			graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
-			// шар
-			graphics.FillEllipse(Brushes.Violet, 30, 50, 46, 66); // первая пара чисел - координаты, вторая - ширина и высота
-			// нитка
-			graphics.DrawLine(Pens.BlueViolet, 53, 116, 210, 300); // первая пара чисел - координаты начала отрезка, вторая - координаты конца
+            for (int i = 0; i < 500; i=i+90)
+            {
+                // шар
+                graphics.FillEllipse(Brushes.Violet, i, 50, 46, 66); // первая пара чисел - координаты, вторая - ширина и высота
+                                                                      // нитка
+                graphics.DrawLine(Pens.BlueViolet, i+20, 116, 210, 300); // первая пара чисел - координаты начала отрезка, вторая - координаты конца
 
-			// бобр
-			DrawHopper(208, 240);
-		}
+                
+            }
+            // бобр
+            DrawHopper(208, 240);
+        }
 
 		private void DrawHopper(int x, int y) {
 			Image img = Image.FromFile("../../Hopper-Jumping.png");
